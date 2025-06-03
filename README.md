@@ -14,6 +14,6 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 - Recommend targeted retention strategies to reduce churn and increase customer lifetime value.
 - Enable the telecom company to proactively intervene with at-risk customers, improving overall customer satisfaction.
  ## DATA 
- - Churn in Telecom's dataset [https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset?resource=download]
+ - [Churn in Telecom's dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset?resource=download)
  - 3,333 telecom customers
  - 21 columns
