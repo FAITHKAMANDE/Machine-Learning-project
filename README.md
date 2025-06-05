@@ -16,11 +16,68 @@ By analyzing usage behavior, plan details, and customer service interactions, we
  ## DATA 
  - [Churn in Telecom's dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset?resource=download)
  - 3,333 telecom customers
- - 21 columns
+ - 21 columns including:
+   Call usage (day, evening, night, international)
+   Subscription plans (international plan, voicemail plan)
+   Customer service interactions
+   Account length and call counts
 ## CLEANING DATA
+- Removed irrelevant columns (phone number).
+- Checked for missing values — none detected.
+- Handled categorical variables via binary encoding (yes/no to 1/0).
+- Log-transformed skewed variables (customer service calls, voicemail messages).
 ## NORMALIZATION AND STANDARDIZATION
+- Analyzed feature distributions to decide on scaling or transformations.
+- Standardization considered where necessary for model optimization.
 ## ANALYSIS AND FEATURE SELECTION
+- Visualized churn distribution.
+- Analyzed relationships using boxplots and chi-square tests.
+- Identified key churn indicators (e.g., international plan, customer service calls).
+- Feature importance analyzed using Random Forest and Logistic Regression.
 ## TRAIN - TEST SPLIT
+- Split data into 80% training and 20% testing sets.
 ## MODELLING
+- Trained multiple models:
+  Logistic Regression (baseline, interpretable)
+  Random Forest Classifier (robust and non-linear)
+  XGBoost Classifier (advanced boosting method)
+- Handled class imbalance using:
+  class_weight='balanced' in models.
+  Threshold tuning (set at 0.35) to improve recall.
 ## EVALUATION
+- Evaluated models using:
+  Accuracy (overall correctness)
+  Recall (churner detection rate)
+  Precision (correct churn predictions)
+  F1-Score (balance between precision and recall)
+  ROC-AUC (discrimination ability)
+- Achieved:
+  82% Recall on churn class
+  86% Precision
+  95% Accuracy
+  0.92 AUC
 ## OBSERVATIONS AND RECOMMENDATIONS
+## OBSE
+### International Plan:
+- Customers with an international plan are significantly more likely to churn.
+- This suggests potential dissatisfaction with the pricing or quality of international services.
+### Voice Mail Plan:
+- Having a voice mail plan reduces churn risk.
+- Voice mail users are more engaged and possibly more satisfied customers.
+### Customer Service Calls:
+- Frequent customer service calls are associated with a higher churn risk.
+- This likely reflects dissatisfaction with service or unresolved issues.
+### Total Day Minutes:
+- Heavy daytime usage correlates with increased churn risk.
+- High usage customers may have greater service expectations and are more sensitive to quality or pricing issues.
+### Total Evening Minutes:
+- Higher evening call minutes are also associated with a moderate increase in churn risk.
+### International Calls
+- customers making more international calls are less likely to churn, suggesting deeper engagement with the service.
+### Total International Minutes:
+- However, higher total international call duration slightly increases churn risk, possibly due to higher costs or dissatisfaction with long call sessions.
+### Three machine learning models were trained and evaluated to predict customer churn:
+- All three models achieved similar high accuracy (95%) and AUC (~0.92).
+- Recall was prioritized to ensure more churners are correctly identified.
+- The models maintained a strong balance between Precision and Recall, avoiding over-predicting churn and ensuring meaningful capture rates.
+- By adjusting the classification threshold to 0.35, Recall improved from 76% to 82%, capturing more actual churners without significantly harming precision
