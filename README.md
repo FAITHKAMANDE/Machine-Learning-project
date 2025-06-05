@@ -57,7 +57,7 @@ By analyzing usage behavior, plan details, and customer service interactions, we
   95% Accuracy
   0.92 AUC
 ## OBSERVATIONS AND RECOMMENDATIONS
-## OBSERVATIONS
+## OBSERVATIONS.
 ### International Plan:
 - Customers with an international plan are significantly more likely to churn.
 - This suggests potential dissatisfaction with the pricing or quality of international services.
