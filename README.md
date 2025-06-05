@@ -17,3 +17,10 @@ By analyzing usage behavior, plan details, and customer service interactions, we
  - [Churn in Telecom's dataset](https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset?resource=download)
  - 3,333 telecom customers
  - 21 columns
+## CLEANING DATA
+## NORMALIZATION AND STANDARDIZATION
+## ANALYSIS AND FEATURE SELECTION
+## TRAIN - TEST SPLIT
+## MODELLING
+## EVALUATION
+## OBSERVATIONS AND RECOMMENDATIONS
