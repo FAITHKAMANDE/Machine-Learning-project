@@ -57,7 +57,7 @@ By analyzing usage behavior, plan details, and customer service interactions, we
   95% Accuracy
   0.92 AUC
 ## OBSERVATIONS AND RECOMMENDATIONS
-## OBSE
+## OBSERVATIONS
 ### International Plan:
 - Customers with an international plan are significantly more likely to churn.
 - This suggests potential dissatisfaction with the pricing or quality of international services.
@@ -81,3 +81,20 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 - Recall was prioritized to ensure more churners are correctly identified.
 - The models maintained a strong balance between Precision and Recall, avoiding over-predicting churn and ensuring meaningful capture rates.
 - By adjusting the classification threshold to 0.35, Recall improved from 76% to 82%, capturing more actual churners without significantly harming precision
+## RECOMMENDATIONS
+### Investigate and Optimize International Plans:
+- Review pricing and service quality for international plans to improve customer satisfaction and reduce churn.
+### Enhance Customer Service:
+- Focus on improving customer service quality and responsiveness.
+- Prioritize customers with frequent service interactions for proactive retention efforts.
+### Promote Voice Mail Plan Adoption:
+- Encourage customers to adopt voicemail plans through promotions or bundled services, as this reduces churn risk.
+### Loyalty Programs for Heavy Users:
+- Introduce loyalty rewards, special discounts, or premium service tiers targeting high day-time and evening call users.
+- Address their high service expectations to prevent churn.
+### Monitor International Usage Patterns:
+- Identify customers with high international call durations and offer special packages or discounts to mitigate potential churn risks.
+### Deploy Random Forest (or Logistic Regression) for Churn Prediction:
+- Given similar performance, Random Forest is recommended for its robustness and slight edge in handling complex relationships.
+- The final model achieves 82% Recall, meaning it can correctly identify 82% of churners a significant improvement for retention efforts.
+- The model should be deployed with a threshold of 0.35 to maximize detection of churners.
