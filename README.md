@@ -77,10 +77,10 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 ### Total International Minutes:
 - However, higher total international call duration slightly increases churn risk, possibly due to higher costs or dissatisfaction with long call sessions.
 ### Three machine learning models were trained and evaluated to predict customer churn:
-- All three models achieved similar high accuracy (95%) and AUC (~0.92).
-- Recall was prioritized to ensure more churners are correctly identified.
-- The models maintained a strong balance between Precision and Recall, avoiding over-predicting churn and ensuring meaningful capture rates.
-- By adjusting the classification threshold to 0.35, Recall improved from 76% to 82%, capturing more actual churners without significantly harming precision
+- GBoost outperformed other models, achieving the highest accuracy (95.2%) and AUC (0.9246), indicating excellent classification ability.
+- Threshold tuning to 0.443 improved Recall across models, ensuring more churners were correctly identified without major losses in Precision.
+- Logistic Regression struggled with lower precision and F1-Score, while Random Forest and XGBoost maintained a strong balance between Precision and Recall.
+- XGBoost is selected as the final model for its superior performance, offering the best trade-off to support proactive customer retention strategies.
 ## RECOMMENDATIONS
 ### Investigate and Optimize International Plans:
 - Review pricing and service quality for international plans to improve customer satisfaction and reduce churn.
@@ -94,7 +94,9 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 - Address their high service expectations to prevent churn.
 ### Monitor International Usage Patterns:
 - Identify customers with high international call durations and offer special packages or discounts to mitigate potential churn risks.
-### Deploy Random Forest (or Logistic Regression) for Churn Prediction:
-- Given similar performance, Random Forest is recommended for its robustness and slight edge in handling complex relationships.
-- The final model achieves 82% Recall, meaning it can correctly identify 82% of churners a significant improvement for retention efforts.
-- The model should be deployed with a threshold of 0.35 to maximize detection of churners.
+### Deploy the XGBoost model for Churn Prediction:
+- Deploy the XGBoost model in production to proactively flag high-risk churn customers, given its strong performance in Precision, Recall, and AUC.
+- Use the adjusted threshold (0.443) operationally to balance capturing more churners while minimizing false positives, leading to more efficient customer retention targeting.
+- Focus retention efforts on customers flagged by the model — prioritize high-value customers to offer loyalty rewards, service improvements, or personalized deals.
+- Continuously monitor and retrain the model on fresh data periodically to maintain high prediction accuracy as customer behaviors and market dynamics evolve.
+- Integrate the model outputs with CRM systems to automate churn interventions, enabling the business to act quickly on at-risk customers with customized retention strategies.
