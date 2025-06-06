@@ -100,3 +100,7 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 - Focus retention efforts on customers flagged by the model — prioritize high-value customers to offer loyalty rewards, service improvements, or personalized deals.
 - Continuously monitor and retrain the model on fresh data periodically to maintain high prediction accuracy as customer behaviors and market dynamics evolve.
 - Integrate the model outputs with CRM systems to automate churn interventions, enabling the business to act quickly on at-risk customers with customized retention strategies.
+## Limitations
+- Model is trained on a small dataset (3,333 rows).
+- Class imbalance may lead to poor recall on minority class.
+- Features do not include customer satisfaction survey results, which could improve model predictive power.
