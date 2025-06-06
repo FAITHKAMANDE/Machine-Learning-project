@@ -43,7 +43,9 @@ By analyzing usage behavior, plan details, and customer service interactions, we
   XGBoost Classifier (advanced boosting method)
 - Handled class imbalance using:
   class_weight='balanced' in models.
-  Threshold tuning (set at 0.35) to improve recall.
+  Threshold tuning (set at 0.4430) to improve recall.
+  <img width="525" alt="Screenshot 2025-06-06 at 15 12 07" src="https://github.com/user-attachments/assets/0500004f-b9d5-4ad5-9fbf-31c0144204a0" />
+
 ## EVALUATION
 - Evaluated models using:
   Accuracy (overall correctness)
@@ -52,10 +54,12 @@ By analyzing usage behavior, plan details, and customer service interactions, we
   F1-Score (balance between precision and recall)
   ROC-AUC (discrimination ability)
 - Achieved:
-  82% Recall on churn class
-  86% Precision
+  78% Recall on churn class
+  90% Precision
   95% Accuracy
-  0.92 AUC
+  0.81 AUC
+  [<img width="845" alt="Screenshot 2025-06-06 at 15 20 57" src="https://github.com/user-attachments/assets/2b8b5415-d4ce-4d18-a1d4-91d99451a539" />
+
 ## OBSERVATIONS AND RECOMMENDATIONS
 ## OBSERVATIONS.
 ### International Plan:
