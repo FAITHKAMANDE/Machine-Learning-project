@@ -77,6 +77,7 @@ By analyzing usage behavior, plan details, and customer service interactions, we
 ### Total International Minutes:
 - However, higher total international call duration slightly increases churn risk, possibly due to higher costs or dissatisfaction with long call sessions.
 ### Three machine learning models were trained and evaluated to predict customer churn:
+
 - GBoost outperformed other models, achieving the highest accuracy (95.2%) and AUC (0.9246), indicating excellent classification ability.
 - Threshold tuning to 0.443 improved Recall across models, ensuring more churners were correctly identified without major losses in Precision.
 - Logistic Regression struggled with lower precision and F1-Score, while Random Forest and XGBoost maintained a strong balance between Precision and Recall.
